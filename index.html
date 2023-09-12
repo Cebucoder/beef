@@ -4,43 +4,625 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/navigation.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
-    <div class="navigation">
+<div class="main">
+    <div class="main-container">
+        <div class="navigation">
 
-
-        <div class="right-content">
-            <!-- logo -->
-            <div class="logo">
-                <img src="" alt="">
+            <div class="right-content">
+                <!-- logo -->
+                <div class="logo">
+                    <img src="" alt="">
+                </div>
+                <!-- logo end-->
+    
+                <!-- navlinks -->
+                <div class="navlinks">
+                    <a href=""><li>Home</li></a>
+                    <a href="#" class="arrow" onclick="showGnere()">
+                        <li>Genres</li>
+                        <span><ion-icon name="chevron-down-outline"></ion-icon></span>
+                        
+                        <!-- genre -->
+                        <div class="genre-cont" id="genre-cont">
+                            <li>Action</li>
+                            <li>Adventure</li>
+                            <li>Fantasy</li>
+                            <li>Horror</li>
+                            <li>Magic</li>
+                            <li>Sci Fi</li>
+                            <li>Sport</li>
+                            <li>Game</li>
+                            <li>Comedy</li>
+                            <li>Harem</li>
+                            <li>Romance</li>
+                            <li>More...</li>
+                        </div>
+                        <!-- genre -->
+                    
+                    <a href="#" class="arrow">
+                        <li onclick="showCategory()">Categories</li>
+                        <span><ion-icon name="chevron-down-outline"></ion-icon></span>
+                        
+                        <!-- categories -->
+                        <div class="categories-cont" id="categories-cont">
+                            <li>Types</li>
+                            <li>Updated</li>
+                            <li>Added</li>
+                            <li>Ongoing</li>
+                            <li>Upcoming</li>
+                            <li>Random</li>
+                            <li>Popular</li>
+                        </div>
+                        <!-- categories -->
+                    </a>
+                </div>
+                <!-- navlinks -->
             </div>
-            <!-- logo end-->
-
-            <!-- navlinks -->
-            <div class="navlinks">
-                <a href=""><li>Home</li></a>
-                <a href=""><li>Genres</li></a>
-                <a href=""><li>Categories</li></a>
+    
+            <div class="leftcontent">
+                <div class="searchbar">
+                    <input type="text" placeholder="Search">
+                    <span><ion-icon name="search-outline"></ion-icon></span>
+                </div>
+                <div class="menu-bar" onclick="showMenu()">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+    
+    
+                <!-- menu bar -content -->
+                <!-- <div class="menu-content" id="menu-content">
+    
+                </div> -->
+    
+    
             </div>
-            <!-- navlinks -->
-        </div>
-
-        <div class="leftcontent">
-            <div class="searchbar">
-                <input type="text" placeholder="Search">
-                <span><ion-icon name="search-outline"></ion-icon></span>
-            </div>
-            <div class="menu-bar">
-                <ion-icon name="menu-outline"></ion-icon>
-            </div>
+    
         </div>
 
     </div>
+
     
+    <div class="hero-cont"></div>
+    
+    <div class="second-content">
+        <div class="card-container">
+            <div class="card-holder">
+                <div class="img" onclick="movie1()">
+                    <img src="./images/card1.png" alt="">
+                    <div class="hd">HD</div>
+                    <div class="sub">SUB</div>
+                    <div class="card-overlay"></div>
+                </div>
+                <div class="title">
+                    <small>Dark Gathering</small>
+                </div>
+            </div>
+            <div class="card-holder" onclick="movie2()">
+                <div class="img">
+                    <img src="./images/card2.png" alt="">
+                    <div class="hd">HD</div>
+                    <div class="sub">SUB</div>
+                    <div class="card-overlay"></div>
+                </div>
+                <div class="title">
+                    <small>No Game No Life</small>
+                </div>
+            </div>
+            <div class="card-holder" onclick="movie3()">
+                <div class="img">
+                    <img src="./images/card3.png" alt="">
+                    <div class="hd">HD</div>
+                    <div class="sub">SUB</div>
+                    <div class="card-overlay"></div>
+                </div>
+                <div class="title">
+                    <small>Kyokkou no Souki</small>
+                </div>
+            </div>
+            <div class="card-holder" onclick="movie4()">
+                <div class="img">
+                    <img src="./images/card4.png" alt="">
+                    <div class="hd">HD</div>
+                    <div class="sub">SUB</div>
+                    <div class="card-overlay"></div>
+                </div>
+                <div class="title">
+                    <small>Masamune-kun no Revenge R</small>
+                </div>
+            </div>
+            <div class="card-holder" onclick="movie5()">
+                <div class="img">
+                    <img src="./images/card5.png" alt="">
+                    <div class="hd">HD</div>
+                    <div class="sub">SUB</div>
+                    <div class="card-overlay"></div>
+                </div>
+                <div class="title">
+                    <small>YAMI SHIBAI</small>
+                </div>
+            </div>
+            <div class="card-holder" onclick="movie6()">
+                <div class="img">
+                    <img src="./images/card6.png" alt="">
+                    <div class="hd">HD</div>
+                    <div class="sub">SUB</div>
+                    <div class="card-overlay"></div>
+                </div>
+                <div class="title">
+                    <small>THE KING'S AVATAR</small>
+                </div>
+            </div>
+            <div class="card-holder" onclick="movie7()">
+                <div class="img">
+                    <img src="./images/card7.png" alt="">
+                    <div class="hd">HD</div>
+                    <div class="sub">SUB</div>
+                    <div class="card-overlay"></div>
+                </div>
+                <div class="title">
+                    <small>Uzumaki: Spiral into Horror</small>
+                </div>
+            </div>
+            <div class="card-holder" onclick="movie8()">
+                <div class="img">
+                    <img src="./images/card8.png" alt="">
+                    <div class="hd">HD</div>
+                    <div class="sub">SUB</div>
+                    <div class="card-overlay"></div>
+                </div>
+                <div class="title">
+                    <small>THE EMINENCE IN SHADOW</small>
+                </div>
+            </div>
+        </div>
+
+
+            <!-- top Anime -->
+            <div class="top-anime-cont">
+                <div class="top-anime-header">
+                    <label for="">Top Anime</label>
+                    <small class="today">Today</small>
+                    <small>Week</small>
+                    <small>Month</small>
+                </div>
+                <div class="anim-banner">
+                    <img src="./images/topanime.png" alt="">
+                    <div class="one">
+                        <span class="num1">1</span>
+                        <div class="one-det">
+                            <small class="one-title">One Piece</small>
+                            <div class="view">
+                                <!-- <span> -->
+                                    <ion-icon name="eye"></ion-icon>
+                                <!-- </span> -->
+                                <small>402,001</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="top-list">
+                    <span>2</span>
+                    <div class="list">
+                        <small class="list-title">Bleach: Thousand-Year<br>Blood War</small>
+                        <div class="view view1">
+                                <ion-icon name="eye"></ion-icon>
+                            <small>372,041</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-list">
+                    <span>3</span>
+                    <div class="list">
+                        <small class="list-title">Naruto: Shippuden</small>
+                        <div class="view view1">
+                                <ion-icon name="eye"></ion-icon>
+                            <small>221,101</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-list">
+                    <span>4</span>
+                    <div class="list">
+                        <small class="list-title">Kingdom TV</small>
+                        <div class="view view1">
+                                <ion-icon name="eye"></ion-icon>
+                            <small>202,422</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-list">
+                    <span>5</span>
+                    <div class="list">
+                        <small class="list-title">Lyndon's Adventure in another world</small>
+                        <div class="view view1">
+                                <ion-icon name="eye"></ion-icon>
+                            <small>184,423</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- top Anime -->
+    </div>
+
+
+<!-- ======================POPUP========================= -->
+
+    <div class="pop-cont" id="movie1" onclick="movie1()">
+        <div class="close-pop" onclick="closePopup()">
+            <ion-icon name="close"></ion-icon>
+        </div>
+        <div class="movie1" >
+            <div class="moviedet-img">
+                <img src="./images/card1.png" alt="">
+                <button>Watch Now</button>
+            </div>
+            <div class="moviedet">
+                <div class="moviewdet-header">
+                   <h4>DARK GATHERING</h4>
+                   <small><em>Dark Gathering, Dark Gathering, </em>おっぱいが大好き</small>
+                </div>
+                <p>Keitarou Gentouga is a college freshman who hates ghosts. Unluckily for him, he has a knack for attracting spirits. Two years ago, this connection had led to him receiving a spiritual injury on his right hand, with his friend getting caught in the crossfire. The event caused him to become a shut-in, leaving him with very poor social skills. Fortunately, Keitarou is slowly starting to mingle with society, thanks to the help of his childhood friend, Eiko Houzuki. As part of his rehabilitation, Keitarou takes on the part-time job of a private tutor, and his first pupil is none other than Eiko's cousin, Yayoi Houzuki. Besides being a child prodigy, there is another peculiarity regarding Yayoi—she has a spiritual constitution, just like Keitarou. However, in contrast to Keitarou, she yearns to encounter spirits, hoping to find the ghost that took her mother away. As Keitarou is dragged along by Yayoi and Eiko to haunted spots, his part-time job seems to be straying further and further away from its original purpose.</p>
+
+                <div class="moview-footer">
+                    <div class="det1">
+                        <small>Type: <span>Tv Series</span></small>
+                        <small>Studios: <span>Olm</span></small>
+                        <small>Date aired: Jul 10, 2023 to ?</small>
+                        <small>Status: <span>Currently AIring</span></small>
+                        <small>Genre: <span>Horror, Shounen, Supernatural</span></small>
+                    </div>
+                    <div class="det1">
+                        <small>Scores: <span>7.5</span></small>
+                        <small>Premiered: <span>Summer</span></small>
+                        <small>Duration: 23 min/ep</small>
+                        <small>Quality: <span>Currently Airing</span></small>
+                        <small>Views: <span>106,000</span></small>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-cont" id="movie2" onclick="movie2()">
+        <div class="close-pop" onclick="closePopup()">
+            <ion-icon name="close"></ion-icon>
+        </div>
+        <div class="movie1" >
+            <div class="moviedet-img">
+                <img src="./images/card2.png" alt="">
+                <button>Watch Now</button>
+            </div>
+            <div class="moviedet">
+                <div class="moviewdet-header">
+                   <h4>NO GAME NO LIFE</h4>
+                   <small><em>No Game No Life, No Game No Life, </em>ノーゲーム・ノーライフ ゼロ</small>
+                </div>
+                <p>In ancient Disboard, Riku is an angry, young warrior intent on saving humanity from the warring Exceed, the sixteen sentient species, fighting to establish the "One True God" amongst the Old Deus. In a lawless land, humanity's lack of magic and weak bodies have made them easy targets for the other Exceed, leaving the humans on the brink of extinction. One day, however, hope returns to humanity when Riku finds a powerful female Ex-machina, whom he names Schwi, in an abandoned elf city. Exiled from her Cluster because of her research into human emotions, Schwi is convinced that humanity has only survived due to the power of these feelings and is determined to understand the human heart.</p>
+
+                <div class="moview-footer">
+                    <div class="det1">
+                        <small>Type: <span>Movie</span></small>
+                        <small>Studios: <span>Madhouse</span></small>
+                        <small>Date aired: Jul 15, 2017</small>
+                        <small>Status: <span>Finished Airing</span></small>
+                        <small>Genre: <span>Drama, Fantasy, Game, Romance, Supernatural, Isekai</span></small>
+                    </div>
+                    <div class="det1">
+                        <small>Scores: <span>8.24</span></small>
+                        <small>Premiered: <span>Fall 2017</span></small>
+                        <small>Duration: 106 min/ep</small>
+                        <small>Quality: <span>HD</span></small>
+                        <small>Views: <span>190,182</span></small>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-cont" id="movie3" onclick="movie3()">
+        <div class="close-pop" onclick="closePopup()">
+            <ion-icon name="close"></ion-icon>
+        </div>
+        <div class="movie1" >
+            <div class="moviedet-img">
+                <img src="./images/card3.png" alt="">
+                <button>Watch Now</button>
+            </div>
+            <div class="moviedet">
+                <div class="moviewdet-header">
+                   <h4>KYOKKOU NO SOUKI</h4>
+                   <small><em>Senki: Kyokkou no Souki, </em>境界>戦機 極鋼ノ装鬼,</small>
+                </div>
+                <p>After the end of the Hokuriku front, a new land for the Japanese people was created, governed by the New Japan Cooperation Organization. However, this did not dramatically improve the situation in Japan. The effective control of the various powers in the country continued, and the oppression of the Japanese people, though lessened, continued. The same is true of the isolated islands in the South Sea. The Oceania Army, which is in effective control of the island, and the resistance organization "Hinukan" that resists them. Then the North American forces attacks, aiming to take over the isolated island</p>
+
+                <div class="moview-footer">
+                  <div class="det1">
+                        <small>Type: <span>ONA</span></small>
+                        <small>Studios: <span>Sunrise Beyond</span></small>
+                        <small>Date aired: Aug 10, 2023 to ?</small>
+                        <small>Status: <span>Currently Airing</span></small>
+                        <small>Genre: <span>Action, Mecha, Sci-Fi</span></small>
+                    </div>
+                    <div class="det1">
+                        <small>Scores: <span>0</span></small>
+                        <small>Premiered: <span>Summer 2023</span></small>
+                        <small>Duration: 10 min/ep</small>
+                        <small>Quality: <span>HD</span></small>
+                        <small>Views: <span>10,168</span></small>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-cont" id="movie4" onclick="movie4()">
+        <div class="close-pop" onclick="closePopup()">
+            <ion-icon name="close"></ion-icon>
+        </div>
+        <div class="movie1" >
+            <div class="moviedet-img">
+                <img src="./images/card4.png" alt="">
+                <button>Watch Now</button>
+            </div>
+            <div class="moviedet">
+                <div class="moviewdet-header">
+                   <h4>MASAMUNE-KUN'S REVENGE R </h4>
+                   <small><em>Masamune-kun no Revenge R, </em>政宗くんのリベンジ</small>
+                </div>
+                <p>As an overweight child, Makabe Masamune was mercilessly teased and bullied by one particular girl, Adagaki Aki. Determined to one day exact his revenge upon her, Makabe begins a rigorous regimen of self-improvement and personal transformation. Years later, Masamune re-emerges as a new man. Handsome, popular, with perfect grades and good at sports, Masamune-kun transfers to Aki's school, and is unrecognizable to her. Now, Masamune-kun is ready to confront the girl who bullied him so many years ago and humiliate her at last. But will revenge be as sweet as he thought?</p>
+
+                <div class="moview-footer">
+                    <div class="det1">
+                        <small>Type: <span>TV Series</span></small>
+                        <small>Studios: <span>Silver Link.</span></small>
+                        <small>Date aired: Jul 3, 2023 to ?</small>
+                        <small>Status: <span>Currently Airing</span></small>
+                        <small>Genre: <span>Comedy, Romance, School, Shounen, Harem</span></small>
+                    </div>
+                    <div class="det1">
+                        <small>Scores: <span>0</span></small>
+                        <small>Premiered: <span>Summer 2023</span></small>
+                        <small>Duration: 23 min/ep</small>
+                        <small>Quality: <span>HD</span></small>
+                        <small>Views: <span>1,582,862</span></small>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-cont" id="movie5" onclick="movie5()">
+        <div class="close-pop" onclick="closePopup()">
+            <ion-icon name="close"></ion-icon>
+        </div>
+        <div class="movie1" >
+            <div class="moviedet-img">
+                <img src="./images/card5.png" alt="">
+                <button>Watch Now</button>
+            </div>
+            <div class="moviedet">
+                <div class="moviewdet-header">
+                   <h4>YAMI SHIBAI</h4>
+                   <small><em>YAMI SHIBAI, Japanese Ghost Stories, </em> 闇芝居 十一期</small>
+                </div>
+                <p>The mysterious, yellow-masked Storyteller is a man whose true name and origin are both unknown. He appears at dusk where children gather and recites sinister tales based on Japanese urban legends, to which his young audience eerily intakes. However, the Storyteller is no ordinary teller of tales. He incorporates a kamishibai, a traditional paper-scrolling device, to add visuals to his already demented narration. A series of short horror stories, Yami Shibai begins with a bachelor who, after moving into a new apartment, immediately starts sensing a malevolent glare being pressed into him. A single talisman rests on his ceiling, but he has no way of knowing it is one of the few safeguards that separate him from a bottomless pit of suffering. Each story is more terrifying, more appalling, and more sickening than the last as the Storyteller's audience find themselves being sucked into the vicious world of his words.</p>
+
+                <div class="moview-footer">
+                    <div class="det1">
+                        <small>Type: <span>TV Series</span></small>
+                        <small>Studios: <span>ILCA</span></small>
+                        <small>Date aired: Jul 10, 2023 to ?</small>
+                        <small>Status: <span>Currently Airing</span></small>
+                        <small>Genre: <span>Dementia, Horror, Supernatural</span></small>
+                    </div>
+                    <div class="det1">
+                        <small>Scores: <span>0</span></small>
+                        <small>Premiered: <span>Summer 2023</span></small>
+                        <small>Duration: 4 min/ep</small>
+                        <small>Quality: <span>HD</span></small>
+                        <small>Views: <span>20,568</span></small>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-cont" id="movie6" onclick="movie6()">
+        <div class="close-pop" onclick="closePopup()">
+            <ion-icon name="close"></ion-icon>
+        </div>
+        <div class="movie1" >
+            <div class="moviedet-img">
+                <img src="./images/card6.png" alt="">
+                <button>Watch Now</button>
+            </div>
+            <div class="moviedet">
+                <div class="moviewdet-header">
+                   <h4>THE KING'S AVATAR</h4>
+                   <small><em>THE KING'S AVATAR, Quanzhi Gaoshou, </em>全职高手</small>
+                </div>
+                <p>Widely regarded as a trailblazer and top-tier professional player in the online multiplayer game Glory, Ye Xiu is dubbed the "Battle God" for his skills and contributions to the game over the years. However, when forced to retire from the team and to leave his gaming career behind, he finds work at a nearby internet café. There, when Glory launches its tenth server, he throws himself into the game once more using a new character named "Lord Grim." Ye Xiu's early achievements on the new server immediately catch the attention of many players, as well as the big guilds, leaving them to wonder about the identity of this exceptional player. However, while he possesses ten years of experience and in-depth knowledge, starting afresh with neither sponsors nor a team in a game that has changed over the years presents numerous challenges. Along with talented new comrades, Ye Xiu once again dedicates himself to traversing the path to Glory's summit! </p>
+
+                <div class="moview-footer">
+
+                    <div class="det1">
+                        <small>Type: <span>ONA</span></small>
+                        <small>Studios: <span>B.CMAY PICTURES</span></small>
+                        <small>Date aired: Apr 7, 2017 to Jun 16, 2017</small>
+                        <small>Status: <span>Finished Airing</span></small>
+                        <small>Genre: <span>Action, Game</span></small>
+                    </div>
+                    <div class="det1">
+                        <small>Scores: <span>8.01</span></small>
+                        <small>Premiered: <span>N/A</span></small>
+                        <small>Duration: 24 min/ep</small>
+                        <small>Quality: <span>HD</span></small>
+                        <small>Views: <span>1,074,536</span></small>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-cont" id="movie7" onclick="movie7()">
+        <div class="close-pop" onclick="closePopup()">
+            <ion-icon name="close"></ion-icon>
+        </div>
+        <div class="movie1" >
+            <div class="moviedet-img">
+                <img src="./images/card7.png" alt="">
+                <button>Watch Now</button>
+            </div>
+            <div class="moviedet">
+                <div class="moviewdet-header">
+                   <h4>UZUMAKI: SPIRAL INTO HORROR</h4>
+                   <small><em>Uzumaki: Spiral into Horror, Uzumaki, The Spiral </em>うずまき</small>
+                </div>
+                <p>In the town of Kurouzu-cho, Kirie Goshima lives a fairly normal life with her family. As she walks to the train station one day to meet her boyfriend, Shuuichi Saito, she sees his father staring at a snail shell in an alley. Thinking nothing of it, she mentions the incident to Shuuichi, who says that his father has been acting weird lately. Shuuichi reveals his rising desire to leave the town with Kirie, saying that the town is infected with spirals. But his father's obsession with the shape soon proves deadly, beginning a chain of horrific and unexplainable events that causes the residents of Kurouzu-cho to spiral into madness. </p>
+
+                <div class="moview-footer">
+                    <div class="det1">
+                        <small>Type: <span>TV Series</span></small>
+                        <small>Studios: <span>Drive</span></small>
+                        <small>Date aired: Jan 1, 2021 to ?</small>
+                        <small>Status: <span>Not yet aired</span></small>
+                        <small>Genre: <span>Dementia, Horror, Psychological, Supernatural, Drama, Romance, Seinen</span></small>
+                    </div>
+                    <div class="det1">
+                        <small>Scores: <span>7.0</span></small>
+                        <small>Premiered: <span>Summer</span></small>
+                        <small>Duration: 16 min/ep</small>
+                        <small>Quality: <span>N/A</span></small>
+                        <small>Views: <span>230,111</span></small>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-cont" id="movie8" onclick="movie8()">
+        <div class="close-pop" onclick="closePopup()">
+            <ion-icon name="close"></ion-icon>
+        </div>
+        <div class="movie1" >
+            <div class="moviedet-img">
+                <img src="./images/card8.png" alt="">
+                <button>Watch Now</button>
+            </div>
+            <div class="moviedet">
+                <div class="moviewdet-header">
+                   <h4>THE EMINENCE IN SHADOW</h4>
+                   <small><em>Kage No Jitsuryokusha Ni Naritakute!, </em>陰の実力者になりたくて！</small>
+                </div>
+                <p>Everything has been going according to plan, but the hour of awakening draws near. Cid Kageno and Shadow Garden investigate the Lawless City, a cesspool where the red moon hangs low in the sky and three powerful monarchs rule the streets. The true draw for Cid, however, is one who can draw blood–the Blood Queen, a vampire who has slumbered in her coffin for eons. Her awakening approaches, and Cid could finally face a day of reckoning.</p>
+
+                <div class="moview-footer">
+                    <div class="det1">
+                        <small>Type: <span>TV Series</span></small>
+                        <small>Studios: <span>Nexus</span></small>
+                        <small>Date aired: Jul 1, 2023 to ?</small>
+                        <small>Status: <span>Not yet aired</span></small>
+                        <small>Genre: <span>Action, Comedy, Fantasy, Isekai</span></small>
+                    </div>
+                    <div class="det1">
+                        <small>Scores: <span>8.39</span></small>
+                        <small>Premiered: <span>Summer 2023</span></small>
+                        <small>Duration: 24 min/ep</small>
+                        <small>Quality: <span>HD</span></small>
+                        <small>Views: <span>600,2130</span></small>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<!-- ======================POPUP========================= -->
+
+
+
+
+
+    <div class="pagination">
+        <span><ion-icon name="chevron-back-outline"></ion-icon></span>
+        <span class="active-page">1</span>
+        <span>2</span>
+        <span>3</span>
+        <span><ion-icon name="chevron-forward-outline"></ion-icon></span>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-top-cont">
+            <div class="footer-logo">
+                <img src="" alt="logo">
+            </div>
+            <div class="footer-links">
+                <a href="">Contact</a>
+                <a href="">Updates</a>
+                <a href="">Music</a>
+                <a href="">Pricing</a>
+                <a href="">Contact</a>
+            </div>
+            <div class="footer-icon">
+                <span><ion-icon name="logo-twitter"></ion-icon></span>
+                <span><ion-icon name="logo-instagram"></ion-icon></span>
+            </div>
+        </div>
+        <div class="footer-bottom-cont">
+            <label>Copyright &copy;2023 Lynked.co</label>
+            <div class="terms">
+                <a href="">Terms of Sevices</a>
+                <a href="">Privacy Policy</a>
+            </div>
+            <div class="subscribe">
+                <input type="text" placeholder="Subscribe">
+                <button>Subscribe</button>
+            </div>
+        </div>
+    </footer>
+
+    
+</div>
+<!-- menu bar -content -->
+<div class="menu-content" id="menu-content">
+    <!-- <a href=""><li>Home</li></a>
+    <a href=""><li>Genre</li></a>
+    <a href=""><li>Categories</li></a> -->
+
+    
+
+    <li>Login</li>
+    <li>About us</li>
+    <li>FAQ</li>
+    <li>Contact</li>
+    <li>Terms & Services</li>
+    <li>Privacy & Policy</li>
+</div>
+
+
 </body>
+<script src="./js/navigation.js"></script>
+<script src="./js/moviepop.js"></script>
+
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
