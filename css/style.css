@@ -14,6 +14,7 @@ a, li{
     width: 100%;
     display: flex;
     position: relative;
+    background: pink;
 }
 body{
     display: flex;
@@ -288,6 +289,7 @@ footer{
     color: #6c757d;
     align-items: center;
     justify-content: space-evenly;
+    cursor: pointer;
 }
 .top-anime-header label{
     color: #fff;
@@ -364,6 +366,7 @@ footer{
     justify-content: flex-start;
     padding: 5px 10px;
     margin: 5px 0;
+    cursor: pointer;
 }
 .top-list span{
     width: 40px;
