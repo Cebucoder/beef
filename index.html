@@ -71,8 +71,8 @@
     
             <div class="leftcontent">
                 <div class="searchbar">
-                    <input type="text" placeholder="Search">
-                    <span><ion-icon name="search-outline"></ion-icon></span>
+                    <input type="text" placeholder="Search" id="searchInput">
+                    <span onclick="searchImages()"><ion-icon name="search-outline"></ion-icon></span>
                 </div>
                 <div class="menu-bar" onclick="showMenu()">
                     <ion-icon name="menu-outline"></ion-icon>
@@ -96,7 +96,7 @@
     
     <div class="second-content">
         <div class="card-container">
-            <div class="card-holder">
+            <div class="card-holder" data-keywords="Dark Gathering">
                 <div class="img" onclick="movie1()">
                     <img src="./images/card1.png" alt="">
                     <div class="hd">HD</div>
@@ -107,7 +107,7 @@
                     <small>Dark Gathering</small>
                 </div>
             </div>
-            <div class="card-holder" onclick="movie2()">
+            <div class="card-holder" onclick="movie2()" data-keywords="No Game No Life">
                 <div class="img">
                     <img src="./images/card2.png" alt="">
                     <div class="hd">HD</div>
@@ -118,7 +118,7 @@
                     <small>No Game No Life</small>
                 </div>
             </div>
-            <div class="card-holder" onclick="movie3()">
+            <div class="card-holder" onclick="movie3()" data-keywords="Kyokkou no Souki">
                 <div class="img">
                     <img src="./images/card3.png" alt="">
                     <div class="hd">HD</div>
@@ -129,7 +129,7 @@
                     <small>Kyokkou no Souki</small>
                 </div>
             </div>
-            <div class="card-holder" onclick="movie4()">
+            <div class="card-holder" onclick="movie4()" data-keywords="Masamune-kun no Revenge R">
                 <div class="img">
                     <img src="./images/card4.png" alt="">
                     <div class="hd">HD</div>
@@ -140,7 +140,7 @@
                     <small>Masamune-kun no Revenge R</small>
                 </div>
             </div>
-            <div class="card-holder" onclick="movie5()">
+            <div class="card-holder" onclick="movie5()" data-keywords="YAMI SHIBAI">
                 <div class="img">
                     <img src="./images/card5.png" alt="">
                     <div class="hd">HD</div>
@@ -151,7 +151,7 @@
                     <small>YAMI SHIBAI</small>
                 </div>
             </div>
-            <div class="card-holder" onclick="movie6()">
+            <div class="card-holder" onclick="movie6()" data-keywords="THE KING'S AVATAR">
                 <div class="img">
                     <img src="./images/card6.png" alt="">
                     <div class="hd">HD</div>
@@ -162,7 +162,7 @@
                     <small>THE KING'S AVATAR</small>
                 </div>
             </div>
-            <div class="card-holder" onclick="movie7()">
+            <div class="card-holder" onclick="movie7()" data-keywords="Uzumaki: Spiral into Horror">
                 <div class="img">
                     <img src="./images/card7.png" alt="">
                     <div class="hd">HD</div>
@@ -173,7 +173,7 @@
                     <small>Uzumaki: Spiral into Horror</small>
                 </div>
             </div>
-            <div class="card-holder" onclick="movie8()">
+            <div class="card-holder" onclick="movie8()" data-keywords="THE EMINENCE IN SHADOW">
                 <div class="img">
                     <img src="./images/card8.png" alt="">
                     <div class="hd">HD</div>
@@ -620,6 +620,29 @@
 
 
 </body>
+
+<script>
+    function searchImages() {
+        // Get the search query from the input field
+        const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+        // Get all image elements
+        const images = document.querySelectorAll('.card-holder');
+
+        // Loop through the images and hide those that don't match the search query
+        images.forEach((image) => {
+            const keywords = image.getAttribute('data-keywords').toLowerCase();
+            if (keywords.includes(searchTerm)) {
+                image.style.display = 'block'; // Show matching images
+            } else {
+                image.style.display = 'none';  // Hide non-matching images
+            }
+        });
+    }
+
+</script>
+
+
 <script src="./js/navigation.js"></script>
 <script src="./js/moviepop.js"></script>
 
